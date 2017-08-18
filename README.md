@@ -1,7 +1,9 @@
 # Jasonette with Blade
 Jasonette (http://jasonette.com/) it's a wondeful tool for making native apps using only json. I think it's more similar to making websites than creating a json response for an API Rest. So why not use the same tools available for websites and apply them to jasonette?.
 
-This is an example of what you could get using a template engine like Laravel's Blade. All the benefits of a template engine (include, inheritance, comments, functions) with the wonders of jasonette united.
+This is an example of what you could get using a template engine like Laravel's Blade (https://laravel.com/docs/5.4/blade). All the benefits of a template engine (include, inheritance, comments, functions) with the wonders of jasonette united.
+
+With this simple approach you can use any template engine for any framework (php, python, js, ruby, java).
 
 ```
 {
