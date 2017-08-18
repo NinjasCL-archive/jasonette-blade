@@ -138,4 +138,33 @@ With this simple approach you can use any template engine for any framework (php
 }
 ```
 
+## Returning views
+I created a simple helper using https://github.com/Seldaek/jsonlint
+
+```php
+<?php namespace App;
+
+/**
+* Helps rendering Jasonette Views
+*/
+use Seld\JsonLint\JsonParser;
+
+class Jasonette
+{
+  public static function load($path)
+  {
+    $parser = new JsonParser();
+    $raw = html_entity_decode(view($path)->render());
+    return $parser->parse($raw);
+  }
+
+  public static function render($path)
+  {
+    return response()->json(Jasonette::load($path));
+  }
+}
+```
+
+Usage: `return Jasonette::render('login.index');`
+
 Made with <i class="fa fa-heart">&#9829;</i> by <a href="http://ninjas.cl" target="_blank">Ninjas.cl</a>.
